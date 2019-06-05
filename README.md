@@ -90,4 +90,4 @@ Copyright 2019 Karim Kanso
 [alpine]: https://alpinelinux.org/ "Alpine Linux"
 [mutillidae]: https://www.owasp.org/index.php/OWASP_Mutillidae_2_Project "owasp.org: OWASP Mutillidae 2 Project"
 [gns3]: https://www.gns3.com/ "GNS3 | The software that empowers network professionals"
-[appliance-file]: https://github.com/kazkansouh/gns3-mutillidae/master/mutillidae.gns3a "GNS3 Appliance File"
+[appliance-file]: https://github.com/kazkansouh/gns3-mutillidae/blob/master/mutillidae.gns3a "GNS3 Appliance File"
