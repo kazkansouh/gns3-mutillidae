@@ -1,0 +1,19 @@
+{
+    "name": "mutillidae",
+    "category": "guest",
+    "description": "Mutillidae is a free, open source, deliberately vulnerable web-application providing a target for web-security enthusiest. This docker image is a downloader for Mutillidae. That is, it only contains the needed dependencies to download and run Mutillidae.",
+    "vendor_name": "OWASP",
+    "vendor_url": "https://www.owasp.org/index.php/OWASP_Mutillidae_2_Project",
+    "product_name": "Mutillidae 2",
+    "registry_version": 1,
+    "status": "stable",
+    "maintainer": "Karim Kanso",
+    "maintainer_email": "none@none.net",
+    "usage": "Set environment variable ALLOW_SUBNET to a CIDR that is trusted to access the instance of Mutillidae.\n\nOn first boot the image will download the latest version of Mutillidae from GitHub.\n\nOnce the image is started, access the server over HTTP (port 80) and follow setup instructions.",
+    "symbol": "linux_guest.svg",
+    "docker": {
+        "adapters": 1,
+        "image": "karimkanso/gns3-mutillidae:latest",
+        "environment": "ALLOW_SUBNET=172.17.0.0/16"
+    }
+}
