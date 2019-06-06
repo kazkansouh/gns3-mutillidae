@@ -7,12 +7,27 @@ each new release), instead it contains the needed the dependencies
 (i.e. Apache, PHP7, MariaDB) and a bootstrap script that downloads the
 latest version of Mutillidae on first use.
 
-## Usage
+## Baseline
 
-### To setup in GNS3
+Image contains:
 
-Download the [appliance][appliance-file] and import into GNS3. When
-running, set the `ALLOW_SUBNET` environment variable (see below).
+* Alpine 3.9
+* Apache2
+* PHP7.2 (only needed libraries installed)
+* MariaDB (provides `mysqld`)
+
+Image developed against Mutillidae 2.7.11, but should be compatible
+with future versions provided no new dependencies are added.
+
+## To setup in GNS3
+
+1. Download the [appliance][appliance-file] and import into GNS3.
+2. Configure the `ALLOW_SUBNET` environment variable (see below).
+3. Ensure that the appliance has internet access (inc. DNS) to GitHub.
+4. Run and wait for Mutillidae to download.
+5. Connect via web browser over http/port 80 and follow setup instructions.
+
+## Usage (without GNS3)
 
 ### Access Control
 The image requires that the environment variable `ALLOW_SUBNET` is set
@@ -84,6 +99,8 @@ docker run -t -i --rm                                 \
 
 # Other bits
 
+For more information see [Mutillidae GitHub][mutillidae-github].
+
 Copyright 2019 Karim Kanso
 
 
@@ -91,3 +108,4 @@ Copyright 2019 Karim Kanso
 [mutillidae]: https://www.owasp.org/index.php/OWASP_Mutillidae_2_Project "owasp.org: OWASP Mutillidae 2 Project"
 [gns3]: https://www.gns3.com/ "GNS3 | The software that empowers network professionals"
 [appliance-file]: https://github.com/kazkansouh/gns3-mutillidae/blob/master/mutillidae.gns3a "GNS3 Appliance File"
+[mutillidae-github]: https://github.com/webpwnized/mutillidae "GitHub.com: OWASP Mutillidae II"
