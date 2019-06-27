@@ -74,10 +74,6 @@ N
 bY
 EOF
 
-sed -i -E \
-    -e '/^Allow from.*### sed tag/bX ; b ; :X' \
-    -e "s|m[^#]*#|m ${ALLOW_SUBNET} #|" \
-
 if ! (httpd && \
           mysqld_safe --datadir='/var/lib/mysql' --nowatch) ; then
     echo "ERROR: Failed to start required services"
